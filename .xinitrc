@@ -1,5 +1,5 @@
 #!/bin/sh
 
-xwallpaper --zoom "$HOME/Pictures/bg.jpg" &
+xwallpaper --zoom "$HOME/Pictures/bg.png" &
 dwmbar &
 exec dwm
