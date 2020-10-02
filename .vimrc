@@ -6,6 +6,8 @@ set encoding=utf-8
 filetype plugin on
 syntax on
 set tabstop=4
+set listchars=tab:-->,space:.
+set list
 set number relativenumber
 set wildmode=longest,list,full
 
