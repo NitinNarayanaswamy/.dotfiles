@@ -6,7 +6,7 @@ if [[ $- != *i* ]]; then return; fi
 PS1='\w\$ '
 
 # alias
-#alias ls='ls --color=auto'
+alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias rm='rm -rf'
 
