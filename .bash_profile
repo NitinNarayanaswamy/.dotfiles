@@ -2,9 +2,9 @@
 
 PATH=$PATH:$HOME/.local/bin
 
-bashrc_file="$HOME/.dotfiles/.bashrc"
+BASHRC_FILE="$HOME/.dotfiles/.bashrc"
 
-if [[ -f $bashrc_file ]]; then source $bashrc_file; fi
+if [[ -f $BASHRC_FILE ]]; then source "$BASHRC_FILE"; fi
 
 # auto start X
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then exec startx; fi
