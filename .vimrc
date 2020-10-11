@@ -1,17 +1,20 @@
-let mapleader=","
-
 " vimrc
+
+" basic
 set nocompatible
-set encoding=utf-8
-filetype plugin on
 syntax on
+filetype plugin on
+set encoding=utf-8
+
+" editor
 set tabstop=4
-set listchars=tab:-->,space:.
+set listchars=tab:-->,space:.,trail:-
 set list
 set number relativenumber
-set wildmode=longest,list,full
+set wildmode=list,longest,full
 
 " keybind
+let mapleader=","
 map <Leader>y "*y
 map <Leader>Y "+y
 map <Leader>p "*p
