@@ -17,14 +17,15 @@ let g:airline_theme='base16_grayscale'
 set nocompatible
 syntax on
 filetype plugin on
+filetype indent off
 set encoding=utf-8
 set spell spelllang=en_gb
 colorscheme gruvbox
 "}
 
 " editor {
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
 set listchars=tab:-->,space:.,trail:-
 set list
 set number relativenumber
@@ -56,4 +57,15 @@ map <C-l> <C-w>l
 " auto execute {
 autocmd BufWritePost *.tex silent! execute "!pdflatex -output-directory pdf % >/dev/null 2>&1" | redraw!
 "}
+
+" latex keybinds
+inoremap <Leader><Tab> <Esc>/<++><Enter>"_c4l
+autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>4hi
+autocmd FileType tex inoremap ,it \textit{}<++><Esc>4hi
+autocmd FileType tex inoremap ,emph \emph{}<++><Esc>4hi
+autocmd FileType tex inoremap ,sec \section{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,*sec \*section{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,ssec \subsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,*ssec \*subsection{}<Enter><++><Esc>kf}i
+autocmd FileType tex inoremap ,ol \begin{enumerate}<Enter><Enter>\end{enumerate}<Enter><Enter><++><Esc>3kA\item<Space>
 
